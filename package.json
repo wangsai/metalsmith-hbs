@@ -1,0 +1,39 @@
+{
+  "name": "metalsmith-hbs",
+  "description": "A metalsmith plugin to render files with templates.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wangsai/metalsmith-hbs.git"
+  },
+  "version": "0.0.3",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "debug": "^2.1.3",
+    "express-hbs": "^0.8.4",
+    "extend": "^2.0.0",
+    "is-utf8": "^0.2.0",
+    "lodash": "^3.7.0",
+    "lodash.omit": "^3.1.0",
+    "multimatch": "^2.0.0"
+  },
+  "devDependencies": {},
+  "maintainers": [
+    {
+      "name": "wangsai",
+      "email": "wangsai@bootcss.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/wangsai/metalsmith-hbs/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/wangsai/metalsmith-hbs",
+  "_id": "metalsmith-hbs@0.0.3",
+  "_shasum": "6f9c849396a256637e0657d887579bacf6bbd0a4",
+  "_from": "metalsmith-hbs@"
+}
