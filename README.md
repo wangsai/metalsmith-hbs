@@ -84,12 +84,16 @@ templatesDir <==> layoutsDir
 
 因此，只要设置了 templatesDir 就可以同时改变 layoutsDir 和 partialsDir 。
 
+## 模板（template）查找顺序
+
+首先判断 `file` 对象是否有 `template` 属性，如果有就使用；如果没有就使用 `defaultTemplate` 参数的值。如果用户未设置 `defaultTemplate` ，则取默认值 `default`。
+
 
 ## Layout
 
 layout 有三种使用方式，下面按照由高到低优先级列出：
 
-1.  D在页面模板中直接声明 layout。语法如下：
+1.  在页面模板中直接声明 layout。语法如下：
 
         {{!< LAYOUT}}
 
