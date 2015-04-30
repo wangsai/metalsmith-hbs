@@ -7,24 +7,24 @@
 ## 参数用法
 
 ### `pattern`
-类型：{String/Array}
-默认值：`**` -- 所有文件
-说明：指定允许此插件来处理文件名。正则表达式。通过 `multimatch` 来处理。
+- 类型：{String/Array}
+- 默认值：`**` -- 所有文件
+- 说明：指定允许此插件来处理文件名。正则表达式。通过 `multimatch` 来处理。
 
 ### `templatesDir`
-类型：{String}
-默认值：`templates`
-说明：模板文件的目录名称。相对路径。默认与 `layoutsDir` 是同一个目录。通过 `metalsmith.path(templatesDir)` 获取绝对路径，也就是相对于 metalsmith 所认为的工作目录。
+- 类型：{String}
+- 默认值：`templates`
+- 说明：模板文件的目录名称。相对路径。默认与 `layoutsDir` 是同一个目录。通过 `metalsmith.path(templatesDir)` 获取绝对路径，也就是相对于 metalsmith 所认为的工作目录。
 
 ### `defaultTemplate`
-类型：{String}
-默认值：`default`
-说明：默认模板文件。只需设置文件名即可，无需添加扩展名。
+- 类型：{String}
+- 默认值：`default`
+- 说明：默认模板文件。只需设置文件名即可，无需添加扩展名。
 
 ### `layoutsDir`
-类型：{String}
-默认值：`templates`
-说明：存放 layout 模板文件的目录。相对路径。与 `templatesDir` 是同一个目录。通过 `metalsmith.path(layoutsDir)` 获取绝对路径，也就是相对于 metalsmith 所认为的工作目录。
+- 类型：{String}
+- 默认值：`templates`
+- 说明：存放 layout 模板文件的目录。相对路径。与 `templatesDir` 是同一个目录。通过 `metalsmith.path(layoutsDir)` 获取绝对路径，也就是相对于 metalsmith 所认为的工作目录。
 
 ### `partialsDir`
 
@@ -33,24 +33,24 @@
 - 说明：指向 partials 目录的相对路径。
 
 ### `defaultLayout`
-类型：{String}
-默认值：无 -- 查找顺序的详细说明见下面 [Layout]
-说明：默认 layout 模板文件名称，不带扩展名。**最好不要设置此值，尽量在模板文件内设置！**
+- 类型：{String}
+- 默认值：无 -- 查找顺序的详细说明见下面 [Layout]
+- 说明：默认 layout 模板文件名称，不带扩展名。**最好不要设置此值，尽量在模板文件内设置！**
 
 ### `handlebars`
-类型：{Module}
-默认值：无
-说明：将用户传入的 handlebars 实例给 express-hbs 使用。
+- 类型：{Module}
+- 默认值：无
+- 说明：将用户传入的 handlebars 实例给 express-hbs 使用。
 
 ### `extname`
-类型：{String}
-默认值：`.hbs`
-说明：所有模板文件的默认扩展名。
+- 类型：{String}
+- 默认值：`.hbs`
+- 说明：所有模板文件的默认扩展名。
 
 ### `i18n`
-类型：{Object}
-默认值：无
-说明：i18n 对象
+- 类型：{Object}
+- 默认值：无
+- 说明：i18n 对象
 
 ### `blockHelperName`
 - 类型：{String}
@@ -58,19 +58,19 @@
 - 说明：自定义 `block` 助手函数的名称。
 
 ### `contentHelperName`
-类型：{String}
-默认值：`contentFor`
-说明：自定义 `contentFor` 助手函数的名称。
+- 类型：{String}
+- 默认值：`contentFor`
+- 说明：自定义 `contentFor` 助手函数的名称。
 
 ### `templateOptions`
-类型：{Object}
-默认值：无
-说明：传递给 `template()` 的额外参数。
+- 类型：{Object}
+- 默认值：无
+- 说明：传递给 `template()` 的额外参数。
 
 ### `beautify`
-类型：{Boolean}
-默认值：`false`
-说明：是否重新排版 HTML 文档，请参考 github.com/einars/js-beautify .jsbeautifyrc
+- 类型：{Boolean}
+- 默认值：`false`
+- 说明：是否重新排版 HTML 文档，请参考 github.com/einars/js-beautify .jsbeautifyrc
 
 ## `templatesDir`、`layoutsDir` 和 `partialsDir` 的关系
 
