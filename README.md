@@ -72,6 +72,11 @@
 - 默认值：`false`
 - 说明：是否重新排版 HTML 文档，请参考 github.com/einars/js-beautify .jsbeautifyrc
 
+### `concurrency`
+- 类型：{Number}
+- 默认值：`Infinity`
+- 说明：绘制页面的并发数量。**由于底层使用的是 `express-hbs` 会在每次调用时重新读取一次模版文件，如果你需要绘制的页面数量巨大的话（超过 `ulimit -u`），必须设置并发数量，否则会抛出 `EMFILE` 异常。 **
+
 ## `templatesDir`、`layoutsDir` 和 `partialsDir` 的关系
 
 这三个目录分别设置了 “模板目录”、“布局文件目录"" 和 ”区块文件目录“。其中，templatesDir 是最高目录，layoutsDir 默认与 templatesDir 一致/相同，partialsDir 默认位于 templatesDir 目录的下面。
@@ -102,7 +107,7 @@ layout 有三种使用方式，下面按照由高到低优先级列出：
         If path 以 '.' 开头
             在当前模板所在目录寻找 LAYOUT
         Else If 设置了 `layoutsDir`
-            从 `layoutsDir` 目录下寻找 LAYOUT 
+            从 `layoutsDir` 目录下寻找 LAYOUT
         Else
             LAYOUT 按照 path.resolve(dirname(template), LAYOUT) 寻找
 
@@ -133,4 +138,4 @@ layout 有三种使用方式，下面按照由高到低优先级列出：
 
 3.  最后，如果设置了 `defaultLayout` 则使用此值。
 
-layout 可以嵌套：在任何一个 layout 文件中还可以继续声明其“父” layout，当前 layout 产生的内容最后输出到“父” layout 中。注意，不要嵌套太多，以免影响性能，尤其注意不要形成循环嵌套。 
+layout 可以嵌套：在任何一个 layout 文件中还可以继续声明其“父” layout，当前 layout 产生的内容最后输出到“父” layout 中。注意，不要嵌套太多，以免影响性能，尤其注意不要形成循环嵌套。
